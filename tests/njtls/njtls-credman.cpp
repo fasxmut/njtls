@@ -7,7 +7,7 @@
 
 #define BOOST_TEST_MODULE "njtls-credman.cpp"
 #include <boost/test/unit_test.hpp>
-#include <njtls/credman.hpp>
+#include <njtls/njtls.hpp>
 #include <iostream>
 #include <botan/auto_rng.h>
 #include <filesystem>
