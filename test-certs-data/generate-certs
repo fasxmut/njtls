@@ -1,0 +1,8 @@
+botan keygen --algo=ECDSA > root-ca.key
+botan gen_self_signed root-ca.key ROOT --ca > root-ca.cert
+botan keygen --algo=ECDSA > pizza.key
+botan gen_pkcs10 pizza.key PIZZA --ca > pizza.csr
+botan sign_cert root-ca.cert root-ca.key pizza.csr > pizza.cert
+botan keygen --algo=ECDSA > cake.key
+botan gen_pkcs10 cake.key CAKE > cake.csr
+botan sign_cert pizza.cert pizza.key cake.csr > cake.cert

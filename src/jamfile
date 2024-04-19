@@ -1,0 +1,15 @@
+srcs =
+	credman.cpp
+;
+
+lib njtls
+	:
+		$(srcs)
+	:
+		<include>$(njtls-headers)
+		<library>..//botan
+	:
+	:
+		<include>$(njtls-headers)
+;
+

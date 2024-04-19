@@ -1,0 +1,11 @@
+lib boost-unit-test
+	:
+	:
+		<name>boost_unit_test_framework
+	:
+	:
+		<define>BOOST_TEST_DYN_LINK
+;
+
+build-project ./njtls ;
+

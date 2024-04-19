@@ -1,0 +1,19 @@
+path-constant njtls-project-root : . ;
+path-constant njtls-headers : $(njtls-project-root)/include ;
+
+using pkg-config ;
+import pkg-config ;
+
+pkg-config.import botan : requirements <name>botan-3 ;
+
+project
+	:
+		requirements
+	:
+		default-build
+			<cxxstd>23
+;
+
+build-project src ;
+build-project tests ;
+
